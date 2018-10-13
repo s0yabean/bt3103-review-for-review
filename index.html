@@ -1,16 +1,31 @@
 <html>
 
 <head>
-	<title>Plain HTML Sandbox</title>
+	<title>Review for Review - All module-related information.</title>
 </head>
 
 <body>
   <div id="app">
 
-	  Counter {{counter}}
-	  <button v-on:click="increment()">Increment</button>
-	  <button v-on:click="reset()">Reset</button>
+    Features:
+	  <br>
+    - Aggregated Data from Official Sources (Tables 12,13 from data lake)
+	  <br>
+    - Word Cloud, Summary Statistics, Time Series (Official Data)
+	  <br>
+    - Individual Reviews, Sources and Links (Unofficial Data)
+	  <br>
+    
+    <br>
+		<button v-on:click="Login">Login</button>
+	  <button v-on:click="Signup">Signup</button>
+	  <button v-on:click="increment()">Find A Review</button>
+	  <button v-on:click="Write A Review">Write A Review</button>
   </div>
+
+<!--JAVASCRIPT
+##################################################################
+-->
 
   <script src="https://unpkg.com/vue"></script>
 
