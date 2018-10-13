@@ -1,0 +1,8 @@
+{
+  "name": "simple-vue-firebase-persistent-counter",
+  "version": "1.0.0",
+  "description": "Simple html stater project with no dependencies",
+  "main": "index.html",
+  "dependencies": {},
+  "keywords": []
+}
