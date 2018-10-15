@@ -1,0 +1,79 @@
+{
+  "students": {
+    "-LMfXx5MqB-aev__vvfw": {
+      "student_token": "32000_1",
+      "m1": 5,
+      "m2": 1,
+      "m3": 2,
+      "m4c": "Good text 7",
+      "m5c": "Bad text 12",
+      "mod_class_id": "ACC2002",
+      "mod_class_name": "Introduction to Economic Analysis",
+      "mod_term": 710,
+      "mod_ay": 7,
+      "mod_sem": 1,
+      "mod_rptterm": 710,
+      "mod_module_code": 2086
+    },
+    "-LMfXxCAR8qjIkwwiUs4": {
+      "student_token": "32000_1",
+      "m1": 5,
+      "m2": 1,
+      "m3": 2,
+      "m4c": "Good text 7",
+      "m5c": "Bad text 12",
+      "mod_class_id": "ACC2002",
+      "mod_class_name": "Introduction to Economic Analysis",
+      "mod_term": 710,
+      "mod_ay": 7,
+      "mod_sem": 1,
+      "mod_rptterm": 710,
+      "mod_module_code": 2086
+    },
+    "-LMfY6Rp_yXhvI26gG6C": {
+      "student_token": "32000_1",
+      "m1": 5,
+      "m2": 1,
+      "m3": 2,
+      "m4c": "Good text 7",
+      "m5c": "Bad text 12",
+      "mod_class_id": "ACC2002",
+      "mod_class_name": "Introduction to Economic Analysis",
+      "mod_term": 710,
+      "mod_ay": 7,
+      "mod_sem": 1,
+      "mod_rptterm": 710,
+      "mod_module_code": 2086
+    },
+    "-LMfYQ-SIskwQurre5yG": {
+      "student_token": "32000_1",
+      "m1": 5,
+      "m2": 1,
+      "m3": 2,
+      "m4c": "Good text 7",
+      "m5c": "Bad text 12",
+      "mod_class_id": "ACC2002",
+      "mod_class_name": "Introduction to Economic Analysis",
+      "mod_term": 710,
+      "mod_ay": 7,
+      "mod_sem": 1,
+      "mod_rptterm": 710,
+      "mod_module_code": 2086
+    },
+    "-LMfYzvJ3A8coA7lZlCT": {
+      "student_token": "32000_1",
+      "m1": 5,
+      "m2": 1,
+      "m3": 2,
+      "m4c": "Good text 7",
+      "m5c": "Bad text 12",
+      "mod_class_id": "ACC2002",
+      "mod_class_name": "Introduction to Economic Analysis",
+      "mod_term": 710,
+      "mod_ay": 7,
+      "mod_sem": 1,
+      "mod_rptterm": 710,
+      "mod_module_code": 2086
+    }
+  }
+}
