@@ -1,90 +1,65 @@
 <html>
-
-<head>
-	<title>Review for Review - All module-related information.</title>
-</head>
-
-<body>
-  <div id="app">
-
-    Features:
-	  <br>
-    - Aggregated Data from Official Sources (Tables 12,13 from data lake)
-	  <br>
-    - Word Clouds, Summary Statistics, Time Series (Official Data)
-	  <br>
-    - Individual Reviews, Sources and Links (Unofficial Data)
-	  <br>
-
-    <ul>
-      <li><a href="zejia.html">zejia's page</a></li>
-      <li><a href="Yiwen.html">yiwen's page</a></li>
-      <li><a href="JY.html">jieyi's page</a></li>
-      <li><a href="tony.html">tony's page</a></li>
-    </ul>
-    
-    <!-- <br>
-		<button v-on:click="Login">Login</button>
-	  <button v-on:click="Signup">Signup</button>
-	  <button v-on:click="increment">Find A Review</button>
-	  <button v-on:click="Write A Review">Write A Review</button> -->
-  </div>
-
-<!--JAVASCRIPT
-##################################################################
--->
-
-  <script src="https://unpkg.com/vue"></script>
-
-  <script>
-
-    var app = new Vue({
-      el:"#app",
-      data: {
-       counter: 0, 
-       databaseUrl: 'https://bt3103-review-for-review.firebaseio.com/app_root.json',
-      },
-	  //mounted: function () { //Will start at zero if you don't update on init
-     //   this.update();
-     // },
-    methods:{
-        increment: function(){
-          this.counter++
-          this.setRemoteCounter(this.counter)
-        },
-        reset: function(){
-          // Post to the counter to set it to zero. 
-          this.counter = 0
-		      this.setRemoteCounter(this.counter)          
-        },
-				 setRemoteCounter: function(newVal){ 
-           // Post to the counter to set it to zero. 
-           fetch(this.databaseUrl, { 
-              method:'put', 
-              body: JSON.stringify({'counter':newVal})
-				    }) 
-            .then(res=>res.json()) 
-            .then(res => { 
-              //console.log(res) 
-              this.update() 
-              }); 
-         },
-        update: function() {
-			    fetch(this.databaseUrl) 
-          .then((response) => { 
-            return response.json(); }) 
-          .then((myJson) => { 
-            console.log("Updated remote counter",myJson)
-            if(myJson) {
-                this.counter = myJson.counter
-            }
-			        
-            });
-        }
+  <head>
+    <title>Vue.js search dropdown component - example</title>
+    <script type="text/javascript" src="https://unpkg.com/vue@latest"></script>
+    <script type="text/javascript" src="https://unpkg.com/vue-simple-search-dropdown@latest/dist/vue-simple-search-dropdown.min.js"></script>
+    <style type="text/css">
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 3em;
       }
-    })
-
-  </script>
-</body>
-
+      h1 {
+        font-weight: 100;
+        font-size: 1.5em;
+      }
+      p {
+        font-size: .8em;
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Vue.js search dropdown component - example</h1>
+      <p>Type "Unicorn" and press enter : </p>
+      <Dropdown
+        :options="options"
+        v-on:selected="validateSelection"
+        v-on:filter="getDropdownValues"
+        :disabled="false"
+        placeholder="Please select an animal">
+      </Dropdown>
+      <p>Selected animal: {{ selected.name || 'none' }}</p>
+      <p>Selected animal id: {{ selected.id || 'none' }}</p>
+    </div>
+    <script type="text/javascript">
+      Vue.use(Dropdown);
+      new Vue({
+        el: '#app',
+        data () {
+          return {
+            options: [
+              { name: 'Cat', id: 'cat' },
+              { name: 'Dog', id: 'dog' },
+              { name: 'Elephant', id: 'elephantssssss' },
+              { name: 'Girafe', id: 'girafe' },
+              { name: 'Snake', id: 'snake' },
+              { name: 'Spider', id: 'spider' },
+              { name: 'Unicorn', id: 'unicorn' }              
+            ],
+            selected: { name: null, id: null }
+          }
+        },
+        methods: {
+          validateSelection(selection) {
+            this.selected = selection;
+            console.log(selection.name+' has been selected');
+          },
+          getDropdownValues(keyword) {
+            console.log('You could refresh options by querying the API with '+keyword);
+          }
+        }
+      });
+    </script>
+  </body>
 </html>
